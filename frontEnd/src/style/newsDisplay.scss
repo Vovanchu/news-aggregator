@@ -1,0 +1,150 @@
+.news-display {
+  max-width: 1200px;
+  min-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+  color: #fff;
+  background-color: #121212;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+}
+
+/* Controls */
+.news-controls {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+}
+
+.news-controls select {
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid #333;
+  background-color: #1e1e1e;
+  color: #fff;
+  outline: none;
+  font-size: 14px;
+}
+
+.news-controls select:focus {
+  border-color: #4f8cff;
+  box-shadow: 0 0 0 2px rgba(79, 140, 255, 0.25);
+}
+
+/* Grid layout */
+.news-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+}
+
+/* News card */
+.news-card {
+  padding: 1rem;
+  border-radius: 8px;
+  background-color: #1e1e1e;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.news-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+
+.news-card h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+  color: #fff;
+}
+
+.news-card p {
+  font-size: 13px;
+  color: #aaa;
+  margin: 2px 0;
+}
+
+/* Pagination */
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.pagination button {
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: none;
+  background-color: #1e1e1e;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.pagination button:hover {
+  background-color: #333;
+}
+
+.pagination button.active {
+  background-color: #4f8cff;
+  color: #fff;
+}
+
+.pagination button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Skeleton loader */
+.news-card.skeleton {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  border-radius: 8px;
+  padding: 1rem;
+  background-color: #1e1e1e;
+  animation: pulse 1.2s infinite;
+
+  .skeleton-img {
+    width: 100%;
+    height: 118px;
+    background-color: #333;
+    border-radius: 4px;
+  }
+
+  .skeleton-title {
+    height: 18px;
+    width: 80%;
+    background-color: #333;
+    border-radius: 4px;
+  }
+
+  .skeleton-line {
+    height: 12px;
+    width: 100%;
+    background-color: #333;
+    border-radius: 4px;
+  }
+
+  .skeleton-line.short {
+    width: 60%;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    background-color: #333;
+  }
+  50% {
+    background-color: #444;
+  }
+  100% {
+    background-color: #333;
+  }
+}
