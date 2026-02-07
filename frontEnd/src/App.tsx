@@ -8,7 +8,7 @@ const App = () => {
   const [search, setSearch] = useState("");
 
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/news-aggregator">
       <SearchBar value={search} onChange={setSearch} />
 
       <Routes>
