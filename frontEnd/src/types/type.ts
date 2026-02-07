@@ -21,7 +21,7 @@ export interface Topic {
 }
 
 // В types/type.ts
-export interface CMSItem<T> {
+export interface CMSItem {
   id: number;
   documentId: string;
   createdAt: string;
@@ -29,11 +29,11 @@ export interface CMSItem<T> {
   publishedAt: string;
 }
 
-export interface AllowedSource extends CMSItem<{}> {
+export interface AllowedSource extends CMSItem {
   name: string;
 }
 
-export interface TopicItem extends CMSItem<{}> {
+export interface TopicItem extends CMSItem {
   title: string;
   keywords: string;
 }
